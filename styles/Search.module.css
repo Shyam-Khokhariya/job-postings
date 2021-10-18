@@ -1,0 +1,28 @@
+.SearchContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: var(--space-sm);
+  padding-right: var(--space-sm);
+}
+.InputBox {
+  height: var(--height);
+  font-family: var(--font-fam);
+  color: var(--color-dark);
+  font-size: 1.8rem;
+  outline: 0;
+  padding: 0 1.6rem;
+  
+  display: flex;
+  flex-direction: column;
+  border-radius: 3px;
+  border:0;
+  box-shadow: 1px 1px 2px 1px rgb(0 0 0 / 10%);
+}
+.ButtonContainer{
+  height: var(--sm-height);
+  font-family: var(--font-fam);
+  outline: 0;
+  
+}
+
