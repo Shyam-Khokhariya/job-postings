@@ -20,4 +20,8 @@ const JobListItem = (props) => {
   );
 };
 
+JobListItem.defaultProps = {
+  job: {},
+};
+
 export default JobListItem;
