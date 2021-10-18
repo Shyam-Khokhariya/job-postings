@@ -3,6 +3,7 @@ import JobList from "./components/JobList";
 import Search from "./components/Search";
 import style from "../styles/JobList.module.css";
 import moment from "moment";
+import Head from "next/head";
 
 function Index({ data }) {
   const [filterJobs, setFilterJobs] = useState([]);
@@ -61,18 +62,24 @@ function Index({ data }) {
   }, [data]);
 
   return (
-    <main className="lockup">
-      <div className={style.Title}>
-        <h1>Zippia Jobs</h1>
-      </div>
-      <Search
-        searchValue={searchValue}
-        onChange={SearchCompany}
-        filtered7Day={filtered7Day}
-        last7Days={last7Days}
-      />
-      <JobList jobs={filterJobs} />
-    </main>
+    <div>
+      <Head>
+        <title>Zippia</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
+      <main className="lockup">
+        <div className={style.Title}>
+          <h1>Zippia Jobs</h1>
+        </div>
+        <Search
+          searchValue={searchValue}
+          onChange={SearchCompany}
+          filtered7Day={filtered7Day}
+          last7Days={last7Days}
+        />
+        <JobList jobs={filterJobs} />
+      </main>
+    </div>
   );
 }
 
