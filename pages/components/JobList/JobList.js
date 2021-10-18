@@ -5,7 +5,7 @@ import { Grid } from "@mui/material";
 const JobList = (props) => {
   const { jobs } = props;
 
-  return jobs.length !== 0 ? (
+  return jobs && jobs.length !== 0 ? (
     <ul role="list" className={`${style.JobList} grid`}>
       {jobs.map((job) => (
         <JobListItem job={job} key={job.jobId} />
